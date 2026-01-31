@@ -7,7 +7,8 @@ from confluent_kafka import Producer
 from myapp.models import Order
 
 producer_conf = {
-    'bootstrap.servers': 'localhost:9092'
+    'bootstrap.servers': 'localhost:9092',
+    'group.id': 'order_service_group'
 }
 
 producer = Producer(producer_conf)
